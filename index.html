@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Block Puzzle</title>
+<link rel="stylesheet" href="blocstyles.css">
+</head>
+<body>
+<main class="app">
+  <h1>Block Puzzle</h1>
+  <section class="hud" aria-label="Scores">
+    <div class="card"><small>Score</small><b id="score" aria-live="polite">0</b></div>
+    <div class="card best"><small>Best</small><b id="best">0</b></div>
+  </section>
+  <div class="bw">
+    <div class="board" id="board" role="grid" aria-label="10 by 10 game board"></div>
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <div class="over" id="over" role="dialog" aria-modal="true" aria-labelledby="overTitle" hidden>
+      <h2 id="overTitle">Game Over</h2>
+      <p>No moves left. Final score <b id="finalScore">0</b></p>
+      <p class="nb" id="newBest" hidden>New best score!</p>
+      <button class="primary" id="again">Play Again</button>
+    </div>
+  </div>
+  <div class="tray" id="tray" aria-label="Available pieces"></div>
+  <p class="hint">Drag a piece onto the board, or tap a piece and then tap the board.</p>
+  <div class="btns">
+    <button id="restart" aria-label="Restart this game with the same starting pieces">Restart</button>
+    <button id="newgame" class="primary" aria-label="Start a new game with new pieces">New Game</button>
+  </div>
+</main>
+<script src="bloc.js"></script>
+</body>
+</html>
